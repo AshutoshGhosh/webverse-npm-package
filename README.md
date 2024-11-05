@@ -1,4 +1,3 @@
-
 # WebVerse Hooks
 
 This package provides two custom React hooks: `useWS` and `useApi`. These hooks simplify working with WebSocket connections and API requests in React applications.
@@ -18,6 +17,7 @@ npm install @gash_17/webverse
 The `useWS` hook enables easy handling of a single WebSocket connection with functionalities like connecting, disconnecting, sending messages, and tracking sent and received messages.
 
 **Importing the Hook**
+
 ```bash
 import { useWS } from '@gash_17/webverse';
 ```
@@ -25,19 +25,22 @@ import { useWS } from '@gash_17/webverse';
 #### Hook Initialization
 
 To initialize a WebSocket connection, provide a WebSocket URL to the hook.
+
 ```bash
 const { connect, disconnect, sendMessage, messages, connectionStatus, error } = useWS('wss://example.com/socket');
 ```
+
 #### Properties and Methods
 
--   **`connect()`**: Establishes a WebSocket connection.
--   **`disconnect()`**: Closes the WebSocket connection.
--   **`sendMessage(message: string)`**: Sends a message through the WebSocket connection.
--   **`messages`**: Array of messages exchanged, where each message is an object with `{ type: "sent" | "received", content: string }`.
--   **`connectionStatus`**: Status of the connection, either `"connected"`, `"disconnected"`, or `"connecting"`.
--   **`error`**: Contains any error messages encountered during the connection.
+- **`connect()`**: Establishes a WebSocket connection.
+- **`disconnect()`**: Closes the WebSocket connection.
+- **`sendMessage(message: string)`**: Sends a message through the WebSocket connection.
+- **`messages`**: Array of messages exchanged, where each message is an object with `{ type: "sent" | "received", content: string }`.
+- **`connectionStatus`**: Status of the connection, either `"connected"`, `"disconnected"`, or `"connecting"`.
+- **`error`**: Contains any error messages encountered during the connection.
 
 Example
+
 ```bash
 import React, { useEffect } from 'react';
 import { useWS } from '@gash_17/webverse';
@@ -83,7 +86,6 @@ const WebSocketComponent = () => {
 export default WebSocketComponent;
 ```
 
-
 ### 2. `useApi` Hook
 
 The `useApi` hook provides a convenient way to make HTTP requests, supporting `GET`, `POST`, `PUT`, and `DELETE` methods with automatic loading state and error handling.
@@ -104,14 +106,15 @@ const { get, post, put, delete: del, isLoading, error } = useApi();
 
 #### Properties and Methods
 
--   **`get<T>(url: string, headers?: Record<string, string>)`**: Makes a GET request.
--   **`post<T>(url: string, body: any, headers?: Record<string, string>)`**: Makes a POST request.
--   **`put<T>(url: string, body: any, headers?: Record<string, string>)`**: Makes a PUT request.
--   **`delete<T>(url: string, headers?: Record<string, string>)`**: Makes a DELETE request.
--   **`isLoading`**: Indicates if a request is in progress.
--   **`error`**: Contains any error message encountered during the request.
+- **`get<T>(url: string, headers?: Record<string, string>)`**: Makes a GET request.
+- **`post<T>(url: string, body: any, headers?: Record<string, string>)`**: Makes a POST request.
+- **`put<T>(url: string, body: any, headers?: Record<string, string>)`**: Makes a PUT request.
+- **`delete<T>(url: string, headers?: Record<string, string>)`**: Makes a DELETE request.
+- **`isLoading`**: Indicates if a request is in progress.
+- **`error`**: Contains any error message encountered during the request.
 
 Example
+
 ```bash
 import React, { useEffect, useState } from 'react';
 import { useApi } from '@gash_17/webverse';
@@ -153,8 +156,8 @@ export default ApiComponent;
 
 ## Summary
 
--   Use `useWS` for WebSocket connections with the ability to send and receive messages.
--   Use `useApi` for making HTTP requests with simplified loading and error handling.
+- Use `useWS` for WebSocket connections with the ability to send and receive messages.
+- Use `useApi` for making HTTP requests with simplified loading and error handling.
 
 ### License
 

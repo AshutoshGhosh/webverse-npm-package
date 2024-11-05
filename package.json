@@ -9,7 +9,14 @@
     "build": "npx rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "xhr",
+    "http",
+    "ajax",
+    "promise",
+    "node",
+    "websocket"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

@@ -1,13 +1,12 @@
 {
   "name": "@gash_17/webverse",
   "version": "1.0.3",
-  "description": "",
+  "description": "Hooks working with WebSocket connections and API requests",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npx rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx rollup -c"
   },
   "keywords": [
     "xhr",
@@ -17,7 +16,8 @@
     "node",
     "websocket"
   ],
-  "author": "",
+  "homepage": "https://github.com/AshutoshGhosh/webverse-npm-package#readme",
+  "author": "Ashutosh",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
